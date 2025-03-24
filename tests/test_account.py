@@ -47,4 +47,4 @@ class TestPersonalAccount:
         account_page.wait_history_order()
         account_page.click_exit()
 
-        assert account_page.wait_button_account
+        assert account_page.get_url() == Urls.PROFILE_URL

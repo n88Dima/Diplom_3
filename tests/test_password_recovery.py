@@ -19,7 +19,7 @@ class TestPasswordRecovery:
     def test_email_click_recovery_password(self, driver, create_user):
         password_recovery_page = PasswordRecoveryPage(driver)
 
-        user_data, _,_ = create_user
+        user_data, response_data,_ = create_user
 
 
         password_recovery_page.click_button_personal_account()
@@ -42,4 +42,4 @@ class TestPasswordRecovery:
         password_recovery_page.click_button_recovery()
         password_recovery_page.click_eye_icon()
 
-        assert password_recovery_page.check_active_password
+        assert password_recovery_page.check_active_password()

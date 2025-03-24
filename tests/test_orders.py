@@ -13,7 +13,7 @@ class TestOrderFeed:
         order_feed.click_order_feed()
 
         order_feed.click_order_in_feed()
-        time.sleep(5)
+        order_feed.check_displaying_order_info()
         assert order_feed.check_displaying_order_info()
 
     @allure.description('заказы пользователя из раздела «История заказов» отображаются на странице «Лента заказов»')

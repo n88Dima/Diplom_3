@@ -55,4 +55,4 @@ class TestFunctions:
         func.wait_bun()
         func.drag_and_drop_ingredient_to_burger_area()
         func.click_order()
-        assert func.check_order
+        assert func.check_order()
